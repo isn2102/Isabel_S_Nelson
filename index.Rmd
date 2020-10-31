@@ -5,8 +5,6 @@ date: "10/27/2020"
 output: html_document
 ---
 ## Questions from video lectures
-
-- I'm familiar with Shiny - why would you choose to use this over creating websites on github? 
 - How do you remove a website once it's made on github? 
 
 ## Homework instructions
@@ -16,7 +14,6 @@ Create a personal website at <YOUR_GH_NAME>.github.io (or some other reasonably-
 A brief introductory landing page
 A page giving your academic and professional experience (i.e. a resume)
 Links in the site navigation for your GitHub account, your email, and other professional networks.  
-
 
 Problem 2
 Create a flexdashboard using plotly for that includes at least three distinct plot types (e.g. scatterplots, line plots, bar plots, box plots, etc.). Use one of the following datasets, and load from the p8105.datasets package:

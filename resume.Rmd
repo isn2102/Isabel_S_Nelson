@@ -1,0 +1,66 @@
+---
+title: "Resume"
+output: html_document
+---
+# Isabel Shulman Nelson
+
+#### EDUCATION
+
+**Mailman School of Public Health, Columbia University - New York, NY**	(Expected May 2021)  
+Master of Public Health in Epidemiology, Certificate in Applied Biostatistics  
+Relevant coursework: Data science, Applied regression I & II, Analysis of categorical data, Epidemiology I, II, & III
+
+**Barnard College, Columbia University - New York, NY**	(May 2016)  
+Bachelor of Arts in Neuroscience and Behavior; Junior Phi Beta Kappa, summa cum laude  
+Thesis: Kinases implicated in tau regulation by means of a miR-219 pathway in mammalian hippocampal neurons
+
+#### PROFESSIONAL EXPERIENCE
+
+**Columbia University Department of Obstetrics & Gynecology - New York, NY** (May–Sept. 2020)  
+Data Analyst
+
+* Carried out data cleaning, management, and analysis for an RCT using SAS.
+* Collaborated regularly with the Principal Investigator to identify avenues of analysis.
+* Assisted with the preparation of a manuscript for publication and additional materials for presentation.
+
+**New York City Department of Health and Mental Hygiene - New York, NY** (Jun.–Sept. 2020)  
+HRTP Research Intern: Bureau of Mental Health, Office of Research and Evaluation
+
+* Conducted data cleaning and quality checks in Excel to support evaluation of the intensive mobile treatment unit.
+* Researched and wrote a literature review to maintain up-to-date knowledge of mental health service delivery in NYC.
+* Analyzed the effects of the COVID-19 pandemic on intensive mobile treatment unit service delivery using SAS and presented findings to the evaluation team and IMT treatment office to guide program implementation.
+
+**Community Healthcare Network - New York, NY** (Aug. 2018–Aug. 2019)  
+Wellness Advocate 
+
+* Interpreted program data and created visualizations using R to guide program decisions and address patient needs.
+* Effectively communicated with 100 patients per week in Spanish and English to educate them on wellness resources.
+* Developed 15 bilingual, health-literate materials from existing resources using Publisher to educate patients. 
+* Compiled and analyzed weekly participant feedback to make data-driven recommendations using Excel.
+
+**Weill Cornell Medicine, laboratory of Dr. Yariv Houvras - New York, NY** (Aug. 2016–Jun. 2018)  
+Research Technician
+
+* Conducted experiments exploring how mutations in epigenetic modifiers impact normal development and melanoma using a zebrafish model system. Performed techniques including PCR, WISH, and western blot. 
+* Analyzed data using basic statistical techniques in Excel and R.
+* Created and delivered PowerPoint presentations every 2 months to communicate data findings.
+* Organized and maintained databases for plasmids, reagents, and zebrafish lines.
+
+#### COMMUNITY ENGAGEMENT & VOLUNTEER EXPERIENCE
+
+**Avodah: the Jewish Service Corps - New York, NY** (Aug. 2018–Aug. 2019)  
+Avodah Corps Member
+
+* Acquired knowledge and skills in leadership, conflict resolution, community building, anti-racism and anti-oppression frameworks, and addressing systematic inequality through weekly workshops.
+* Facilitated communal meetings using a consensus model and planned community events for a cohort of 25.
+
+#### PUBLICATIONS 
+
+DiNapoli, S.E., Martinez-McFaline, R., Gribbin, C.K., Wrighton, P., Balgobin, C.A., **Nelson, I.**, Leonard, A., Maskin, C.R., Shwartz, A., Quenzer, E.D., Mailhiot, D., Kao, C., McConnell, S.C., De Jong, J.L.O., Goessling, W., Houvras, Y. Synthetic CRISPR/Cas9 reagents facilitate genome editing and homology directed repair. (2020) Nucleic Acids Res. https://doi.org/10.1093/nar/gkaa085.
+
+#### SKILLS & INTERESTS
+
+**Computer:** Proficient in R, SAS; experienced in Excel, Publisher, Zoom facilitation; knowledge of Python, Illustrator, GIS  
+**Languages:** Proficient in written and spoken Spanish, basic knowledge of written and spoken Hebrew  
+**Interests:** Data visualization, aging research, scenic/costume design, reading, competitive gymnastics (10 years)
+
