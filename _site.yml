@@ -5,8 +5,6 @@ navbar:
   right:
     - text: "Resume"
       href: resume.html
-    - text: "Projects"
-      href: projects.html
     - icon: fa-envelope fa-lg
       href: mailto:<isabelsnelson@gmail.com>
     - icon: fa-github fa-lg

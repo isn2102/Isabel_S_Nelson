@@ -5,8 +5,12 @@ output: html_document
 
 ### Theatre Design
 
-* [Design Website](https://isabelsnelson.wixsite.com/design)
+* [Set & Costume Design](https://isabelsnelson.wixsite.com/design)
+
+![](Set Design2.png)
 
 ### Public Health 
 
 * [COVID-19 outbreak visualization app](https://isabelsnelson.shinyapps.io/Covid-19_Tracking/?_ga=2.115800385.63367316.1592790986-1470516770.1589839160)
+
+![](Covid.png) 

@@ -1,9 +1,37 @@
 ---
-title: "Homework 4: websites + plotly"
-author: "Isabel Nelson"
-date: "10/27/2020"
+title: " "
 output: html_document
 ---
+
+### About me 
+I grew up in Olympia, WA and now live in New York City where I do public health by day and design sets and costumes for theatre by night. I'm interested in sustainable design, as well as using data responsibly to communicate public health research to a wider audience and inform policy and practice. I love to doodle, organize, read, hike, and eat.
+
+MPH candidate, Columbia University  
+BA Barnard College
+
+### Projects
+
+:::::: {style="display: flex;"}
+
+::: {}
+[Set & Costume Design Website](https://isabelsnelson.wixsite.com/design)
+![](Set Design3.png)
+
+:::
+
+::: {}
+
+
+:::
+
+::: {}
+[COVID-19 outbreak visualization app](https://isabelsnelson.shinyapps.io/Covid-19_Tracking/?_ga=2.115800385.63367316.1592790986-1470516770.1589839160)
+![](Covid.png) 
+
+:::
+
+::::::
+
 ## Questions from video lectures
 - How do you remove a website once it's made on github? 
 
@@ -11,7 +39,6 @@ output: html_document
 Problem 1
 Create a personal website at <YOUR_GH_NAME>.github.io (or some other reasonably-named location). This page can be as extensive as you’d like, but it should include at least:
 
-A brief introductory landing page
 A page giving your academic and professional experience (i.e. a resume)
 Links in the site navigation for your GitHub account, your email, and other professional networks.  
 
