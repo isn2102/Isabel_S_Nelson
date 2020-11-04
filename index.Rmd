@@ -13,18 +13,19 @@ BA Barnard College
 
 :::::: {style="display: flex;"}
 
-::: {}
+::: {width="20%"}
 [Set & Costume Design Website](https://isabelsnelson.wixsite.com/design)
 ![](Set Design3.png)
 
 :::
 
-::: {}
-
+::: {width="20%"}
+\
+<!--Spacing -->
 
 :::
 
-::: {}
+::: {width="20%"}
 [COVID-19 outbreak visualization app](https://isabelsnelson.shinyapps.io/Covid-19_Tracking/?_ga=2.115800385.63367316.1592790986-1470516770.1589839160)
 ![](Covid.png) 
 
