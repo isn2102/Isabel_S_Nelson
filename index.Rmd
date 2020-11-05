@@ -3,7 +3,7 @@ title: "About Me"
 output: html_document
 ---
 
-I grew up in Olympia, WA and now live in New York City where I do public health by day and design sets and costumes for theatre by night. I'm interested in sustainable design, as well as responsibly using data to communicate public health research to a wider audience, with the goal of informing policy and practice. I love to doodle, organize, read, hike, and cook.
+I grew up in Olympia, WA and now live in New York City where I work in public health by day and design sets and costumes for theatre by night. I'm interested in sustainable design and responsibly using data to communicate public health research to a wider audience. I'd ultimately like to work disseminating research insights to inform public health policy and practice. I love to doodle, organize, read, hike, and build stuff.
 
 MPH candidate, Columbia University  
 BA Barnard College
