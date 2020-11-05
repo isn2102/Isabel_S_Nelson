@@ -1,11 +1,11 @@
 ---
-title: "Plotly Dashboard"
+title: "NY Climate Dashboard"
 output: 
   flexdashboard::flex_dashboard:
+    theme: cosmo
     orientation: columns
     vertical_layout: fill
     source: embed
-    theme: cosmo
 ---
 
 ```{r setup, include=FALSE}
@@ -30,13 +30,6 @@ ny_noaa_df <-
       USW00094728 = "New_York_City", 
       USW00014771 = "Syracuse"))
 
-month_df <-
-  tibble(
-    month = 1:12, 
-    Month = as.factor(month.name))
-
-ny_noaa_final <- left_join(ny_noaa_df, month_df, by = "month")
-
 ```
 
 Column {data-width=350}
@@ -50,14 +43,15 @@ x_axis <- list(
   title = "Month")
 
 y_axis <- list(
-  title = "Average Maximum Temperature")
+  title = "Average Maximum Temperature (C)")
 
 ny_noaa_df %>% 
   group_by(station, year, month) %>% 
   summarize(
     mean_tmax = round(mean(tmax, na.rm = TRUE))) %>% 
+  mutate(text_label = str_c("Month:", month, "\nTemp:", mean_tmax, "(C)")) %>%  
   plot_ly(
-    x = ~month, y = ~mean_tmax, color = ~station, text = ~mean_tmax,
+    x = ~month, y = ~mean_tmax, color = ~station, text = ~text_label,
     alpha = .8, type = "scatter", mode = "lines", colors = "Dark2") %>% 
   layout(
     xaxis = x_axis, 
@@ -72,14 +66,15 @@ x_axis <- list(
   title = "Month")
 
 y_axis <- list(
-  title = "Average Minimum Temperature")
+  title = "Average Minimum Temperature (C)")
 
 ny_noaa_df %>% 
   group_by(station, year, month) %>% 
   summarize(
     mean_tmin = round(mean(tmin, na.rm = TRUE))) %>% 
+  mutate(text_label = str_c("Month:", month, "\nTemp:", mean_tmin, "(C)")) %>% 
   plot_ly(
-    x = ~month, y = ~mean_tmin, color = ~station, text = ~mean_tmin,
+    x = ~month, y = ~mean_tmin, color = ~station, text = ~text_label,
     alpha = .8, type = "scatter", mode = "lines", colors = "Dark2") %>% 
   layout(
     xaxis = x_axis, 
@@ -98,14 +93,15 @@ x_axis <- list(
   title = "Month")
 
 y_axis <- list(
-  title = "Average Precipitation")
+  title = "Average Precipitation (mm)")
 
 ny_noaa_df %>% 
   group_by(station, month) %>% 
   summarize(
     mean_prcp = round(mean(prcp, na.rm = TRUE))) %>% 
+  mutate(text_label = str_c("Month:", month, "\nPrecipitation:", mean_prcp, "(C)")) %>% 
   plot_ly(
-    x = ~month, y = ~mean_prcp, color = ~station,
+    x = ~month, y = ~mean_prcp, color = ~station, text = ~text_label,
     alpha = .8, type = "bar", colors = "Dark2") %>% 
   layout(
     xaxis = x_axis, 
@@ -131,11 +127,10 @@ plot_ly(alpha = 0.8) %>%
   add_histogram(
     x = ~prcp, 
     name = "Precipitation", 
-    color = "Dark Green") %>%        
+    color = "Green") %>%        
   add_histogram(
     x = ~snow, 
-    name = "Snowfall", 
-    color = "Red") %>%    
+    name = "Snowfall") %>%    
   layout(
     barmode = "overlay", 
     xaxis = x_axis, 
@@ -158,11 +153,10 @@ plot_ly(alpha = 0.8) %>%
   add_histogram(
     x = ~prcp, 
     name = "Precipitation", 
-    color = "Dark Green") %>%        
+    color = "Green") %>%        
   add_histogram(
     x = ~snow, 
-    name = "Snowfall", 
-    color = "Red") %>%    
+    name = "Snowfall") %>%    
   layout(
     barmode = "overlay", 
     xaxis = x_axis, 
