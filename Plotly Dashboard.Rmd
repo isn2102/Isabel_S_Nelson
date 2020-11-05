@@ -130,7 +130,8 @@ plot_ly(alpha = 0.8) %>%
     color = "Green") %>%        
   add_histogram(
     x = ~snow, 
-    name = "Snowfall") %>%    
+    name = "Snowfall", 
+    color = "Orange") %>%    
   layout(
     barmode = "overlay", 
     xaxis = x_axis, 
@@ -156,7 +157,8 @@ plot_ly(alpha = 0.8) %>%
     color = "Green") %>%        
   add_histogram(
     x = ~snow, 
-    name = "Snowfall") %>%    
+    name = "Snowfall", 
+    color = "Orange") %>%    
   layout(
     barmode = "overlay", 
     xaxis = x_axis, 
