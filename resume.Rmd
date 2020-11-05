@@ -1,8 +1,7 @@
 ---
-title: "Resume"
+title: "Isabel Shulman Nelson"
 output: html_document
 ---
-# Isabel Shulman Nelson
 
 #### EDUCATION
 

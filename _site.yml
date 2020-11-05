@@ -13,4 +13,4 @@ navbar:
       href: https://www.linkedin.com/in/isabel-shulman-nelson/  
 output:
   html_document:
-    theme: cerulean
+    theme: cosmo
