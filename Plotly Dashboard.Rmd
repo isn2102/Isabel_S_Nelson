@@ -5,6 +5,7 @@ output:
     orientation: columns
     vertical_layout: fill
     source: embed
+    theme: cosmo
 ---
 
 ```{r setup, include=FALSE}
@@ -44,54 +45,127 @@ Column {data-width=350}
 ### Average Max Temperature
 
 ```{r}
+x_axis <- list(
+  nticks = 12,
+  title = "Month")
+
+y_axis <- list(
+  title = "Average Maximum Temperature")
+
 ny_noaa_df %>% 
   group_by(station, year, month) %>% 
   summarize(
     mean_tmax = round(mean(tmax, na.rm = TRUE))) %>% 
   plot_ly(
     x = ~month, y = ~mean_tmax, color = ~station, text = ~mean_tmax,
-    alpha = .9, type = "scatter", mode = "lines", colors = "viridis")
+    alpha = .8, type = "scatter", mode = "lines", colors = "Dark2") %>% 
+  layout(
+    xaxis = x_axis, 
+    yaxis = y_axis)
 ```
-
-Column {data-width=350}
------------------------------------------------------------------------
 
 ### Average Min Temperature
 
 ```{r}
+x_axis <- list(
+  nticks = 12,
+  title = "Month")
+
+y_axis <- list(
+  title = "Average Minimum Temperature")
+
 ny_noaa_df %>% 
   group_by(station, year, month) %>% 
   summarize(
     mean_tmin = round(mean(tmin, na.rm = TRUE))) %>% 
   plot_ly(
     x = ~month, y = ~mean_tmin, color = ~station, text = ~mean_tmin,
-    alpha = .9, type = "scatter", mode = "lines", colors = "viridis")
+    alpha = .8, type = "scatter", mode = "lines", colors = "Dark2") %>% 
+  layout(
+    xaxis = x_axis, 
+    yaxis = y_axis)
 ```
 
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Average Precipitation by Month
 
 ```{r}
+x_axis <- list(
+  nticks = 12,
+  title = "Month")
+
+y_axis <- list(
+  title = "Average Precipitation")
+
 ny_noaa_df %>% 
   group_by(station, month) %>% 
   summarize(
     mean_prcp = round(mean(prcp, na.rm = TRUE))) %>% 
   plot_ly(
     x = ~month, y = ~mean_prcp, color = ~station,
-    type = "bar", colors = "viridis")
+    alpha = .8, type = "bar", colors = "Dark2") %>% 
+  layout(
+    xaxis = x_axis, 
+    yaxis = y_axis)
 ```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
 
 ### Distribution of Precipitation - Syracuse
 
 ```{r}
+x_axis <- list(
+  title = "Precipitation (mm)")
+
+y_axis <- list(
+  title = "Count")
+
 ny_noaa_df %>% 
   filter(snow != 0) %>% 
   filter(station == "Syracuse") %>% 
-plot_ly(alpha = 0.5, colors = "viridis") %>%
-  add_histogram(x = ~prcp) %>%        
-  add_histogram(x = ~snow) %>%    
-  layout(barmode = "overlay")
+plot_ly(alpha = 0.8) %>%
+  add_histogram(
+    x = ~prcp, 
+    name = "Precipitation", 
+    color = "Dark Green") %>%        
+  add_histogram(
+    x = ~snow, 
+    name = "Snowfall", 
+    color = "Red") %>%    
+  layout(
+    barmode = "overlay", 
+    xaxis = x_axis, 
+    yaxis = y_axis)
 ```
+
+### Distribution of Precipitation - NYC
+
+```{r}
+x_axis <- list(
+  title = "Precipitation (mm)")
+
+y_axis <- list(
+  title = "Count")
+
+ny_noaa_df %>% 
+  filter(snow != 0) %>% 
+  filter(station == "New_York_City") %>% 
+plot_ly(alpha = 0.8) %>%
+  add_histogram(
+    x = ~prcp, 
+    name = "Precipitation", 
+    color = "Dark Green") %>%        
+  add_histogram(
+    x = ~snow, 
+    name = "Snowfall", 
+    color = "Red") %>%    
+  layout(
+    barmode = "overlay", 
+    xaxis = x_axis, 
+    yaxis = y_axis)
+```
+

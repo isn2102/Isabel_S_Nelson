@@ -12,7 +12,7 @@ navbar:
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/isabel-shulman-nelson/  
     - text: "Dashboard"
-      href: Plotly Dashboard.html
+      href: Plotly-Dashboard.html
 output:
   html_document:
     theme: cosmo
