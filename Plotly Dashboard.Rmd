@@ -1,0 +1,97 @@
+---
+title: "Plotly Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+```
+
+```{r}
+data("ny_noaa")
+ny_noaa_df <- 
+  ny_noaa %>% 
+  filter(id %in% c("USW00094728", "USW00014771")) %>% 
+  separate(date, into = c("year", "month", "day"), convert = TRUE) %>% 
+  mutate(
+    tmax = as.numeric(tmax)/10,
+    tmin = as.numeric(tmin)/10,
+    station = recode(
+      id, 
+      USW00094728 = "New_York_City", 
+      USW00014771 = "Syracuse"))
+
+month_df <-
+  tibble(
+    month = 1:12, 
+    Month = as.factor(month.name))
+
+ny_noaa_final <- left_join(ny_noaa_df, month_df, by = "month")
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Average Max Temperature
+
+```{r}
+ny_noaa_df %>% 
+  group_by(station, year, month) %>% 
+  summarize(
+    mean_tmax = round(mean(tmax, na.rm = TRUE))) %>% 
+  plot_ly(
+    x = ~month, y = ~mean_tmax, color = ~station, text = ~mean_tmax,
+    alpha = .9, type = "scatter", mode = "lines", colors = "viridis")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Average Min Temperature
+
+```{r}
+ny_noaa_df %>% 
+  group_by(station, year, month) %>% 
+  summarize(
+    mean_tmin = round(mean(tmin, na.rm = TRUE))) %>% 
+  plot_ly(
+    x = ~month, y = ~mean_tmin, color = ~station, text = ~mean_tmin,
+    alpha = .9, type = "scatter", mode = "lines", colors = "viridis")
+```
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+ny_noaa_df %>% 
+  group_by(station, month) %>% 
+  summarize(
+    mean_prcp = round(mean(prcp, na.rm = TRUE))) %>% 
+  plot_ly(
+    x = ~month, y = ~mean_prcp, color = ~station,
+    type = "bar", colors = "viridis")
+```
+
+### Distribution of Precipitation - Syracuse
+
+```{r}
+ny_noaa_df %>% 
+  filter(snow != 0) %>% 
+  filter(station == "Syracuse") %>% 
+plot_ly(alpha = 0.5, colors = "viridis") %>%
+  add_histogram(x = ~prcp) %>%        
+  add_histogram(x = ~snow) %>%    
+  layout(barmode = "overlay")
+```

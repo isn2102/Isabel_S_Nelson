@@ -1,7 +1,7 @@
 name: "Personal Website"
 output_dir: "."
 navbar:
-  title: "Home"
+  title: "Isabel Shulman Nelson"
   right:
     - text: "Resume"
       href: resume.html
@@ -11,6 +11,8 @@ navbar:
       href: http://github.com/isn2102/
     - icon: fa-linkedin fa-lg
       href: https://www.linkedin.com/in/isabel-shulman-nelson/  
+    - text: "Dashboard"
+      href: Plotly Dashboard.html
 output:
   html_document:
     theme: cosmo
